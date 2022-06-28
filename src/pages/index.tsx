@@ -1,6 +1,7 @@
 import yayJpg from '../assets/yay.jpg';
 
 export default function HomePage() {
+  1;
   return (
     <div>
       <h2>Yay! Welcome to umi!</h2>
