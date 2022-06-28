@@ -8,10 +8,19 @@
     "start": "npm run dev"
   },
   "lint-staged": {
-    "*.{jsx,less,md,json}": [
+    "*.{md,json}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "umi lint --fix --eslint-only",
+      "prettier --write"
+    ],
+    "*.{css,less}": [
+      "umi lint --fix --stylelint-only",
       "prettier --write"
     ],
     "*.ts?(x)": [
+      "umi lint --fix --eslint-only",
       "prettier --parser=typescript --write"
     ]
   },
@@ -21,6 +30,7 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "eslint": "^8.18.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2",
